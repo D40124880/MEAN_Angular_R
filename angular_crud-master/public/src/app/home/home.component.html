@@ -1,0 +1,15 @@
+<h3>Dogs List</h3>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Breed</th>
+  </tr>
+  <span *ngIf="allDogs">
+  <tr *ngFor="let dog of allDogs">
+    <td><a [routerLink]="['/dogs', dog._id]">{{dog.name}}</a></td>
+    <td>{{dog.age}}</td>
+    <td>{{dog.breed}}</td>
+  </tr>
+  </span>
+</table>

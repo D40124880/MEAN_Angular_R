@@ -1,0 +1,8 @@
+<h3>Edit {{dog.name}}</h3>
+
+<form (submit)="updateDog()">
+  <p>Name: <input type="text" name="dog.name" [(ngModel)]="dog.name"></p>
+  <p>Age: <input type="number" name="dog.age" [(ngModel)]="dog.age"></p>
+  <p>Breed: <input type="text" name="dog.breed" [(ngModel)]="dog.breed"></p>
+  <input type="submit" value="Update">
+</form>

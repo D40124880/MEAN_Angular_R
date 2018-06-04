@@ -1,0 +1,1 @@
+app.use(express.static( __dirname + '/my-angular-app/dist/my-angular-app' ));

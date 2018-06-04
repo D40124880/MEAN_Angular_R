@@ -1,0 +1,9 @@
+<div *ngIf="dog">
+  <h1>{{dog.name}}'s Page</h1>
+
+  <h3>Age: {{dog.age}}</h3>
+  <h3>Breed: {{dog.breed}}</h3>
+
+  <a [routerLink]="['/dogs', dog._id, 'edit']">Edit</a>
+  <button (click)="deleteDog(dog._id)">Delete</button>
+</div>

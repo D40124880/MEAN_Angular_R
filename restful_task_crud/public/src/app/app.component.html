@@ -1,0 +1,31 @@
+<div>
+  <div id="create">
+    <h2>Add New Dog!</h2>
+    <form (submit)='addDog()'>
+      <h3>Name: <input type="text" name="dog.name" [(ngModel)]='dog.name' ></h3>
+      <h3>Age: <input type="number" name="dog.age" [(ngModel)]='dog.age' ></h3>
+      <h3>Breed: <textarea name="dog.breed" [(ngModel)]='dog.breed' id="" cols="30" rows="10"></textarea></h3>
+      <button>Add Dog!</button>
+    </form>
+  </div>
+
+  <div id="edit">
+    <form *ngIf="dogEdit" (submit)="updateDog()" >
+      <h2>Edit Dog!</h2>
+
+      <h3>Name: <input type="text" name="dogEdit.name" [(ngModel)]='dogEdit.name' ></h3>
+      <h3>Age: <input type="number" name="dogEdit.age" [(ngModel)]='dogEdit.age' ></h3>
+      <h3>Breed: <textarea name="dogEdit.breed" [(ngModel)]='dogEdit.breed' id="" cols="30" rows="10"></textarea></h3>
+
+      <button>Update</button>
+    </form>
+  </div>
+</div>
+
+<div id="show" *ngFor="let dog of allDogs">
+  <h3>Name: -- {{ dog.name }}</h3>
+  <h3>Age: -- {{ dog.age }}</h3>
+  <h3>Breed: -- {{ dog.breed }}</h3>
+  <button (click)="showUpdate(dog)">Edit</button>
+  <button (click)="deleteDog(dog._id)">Delete</button>
+</div>

@@ -1,0 +1,14 @@
+<h3>Add New Dog</h3>
+<form (submit)="addDog()">
+  <p>Name:
+    <input type="text" name="dog.name" [(ngModel)]="dog.name">
+  </p>
+  <p>Age:
+    <input type="number" name="dog.age" [(ngModel)]="dog.age">
+  </p>
+  <p>Breed:
+    <input type="text" name="dog.breed" [(ngModel)]="dog.breed">
+  </p>
+  <input type="submit" value="Add Dog">
+</form>
+<p *ngFor="let e of errors">{{e}}</p>

@@ -1,0 +1,18 @@
+#show{
+    border: 1px solid lightblue;
+    padding: 10px;
+    display: inline-block;
+    width: 200px;
+    margin: 25px;
+}
+
+#create{
+    display: inline-block;
+    width: 350px;
+    vertical-align: top;
+}
+
+#edit{
+    display: inline-block;
+    width: 350px;
+}
